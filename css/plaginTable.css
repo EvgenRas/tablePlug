@@ -1,0 +1,93 @@
+/*
+*	Оснновное
+*/
+* {margin:0; padding:0; outline:0}
+table{border-collapse: separate; border-spacing: 0;}
+/*Загловки*/
+thead th{position: relative; box-sizing: border-box;}
+tr:hover{cursor: pointer;}
+/*метка сортировки треугольник*/
+thead th.dsc::after, thead th.getsort::after, thead th.asc::after, thead th.getsort::before{
+	content: '';
+	position: absolute;
+	border: 5px solid transparent;
+}
+div[id^=blockTabelTop]{clear: both;}
+div[id^=searchBlock]{clear: left; float: left;position: relative;}
+
+button[type="reset"] {
+    position: absolute;
+    top: 2px;    
+    right: 2px;    
+    border: 0;    
+    padding: 0 5px;    
+    background-color: #fff;  
+   
+    cursor: pointer;
+}
+button[type="reset"]:hover{
+	background-color: #eee;
+}
+div[id^=countBlock]{clear: right; float: right;}
+label[id^=selcount]{float: right; margin-bottom: 20px;}
+div[id^=pagination]{float: left;}
+div[id^=pagination] a, div[id^=pagination] i {    
+    display: inline-block;
+    width: 22px;
+    text-align: center;    
+}
+div[id^=pagination] a {cursor: pointer;}
+/*
+*	Тема
+*/
+
+table{width: 100%; margin: 0 auto;}
+/*Загловки*/
+thead th{
+	padding: 10px 25px;
+	margin: 0;
+	font-size: 12px;
+	text-align: left;
+	border-right: none;
+}
+/*Ячейки*/
+tbody td{padding: 4px 6px 6px;}
+/*метка сортировки треугольник*/
+thead th.dsc::after, thead th.getsort::after{right: 5px; top: 5px;}
+thead th.asc::after, thead th.getsort::before{right: 5px; top: 17px;}
+/*
+* 	Цвета
+*/
+/*таблица*/
+table {
+	border-left: 1px solid #c6d5e1;
+	border-top: 1px solid #c6d5e1;
+	border-bottom: 1px solid #111;
+}
+/*заголовки*/
+thead th{background-color: #69c; color: #cfdce7; border: 1px solid #fff;}
+thead th.asc, thead th.dsc{background-color: #09c; color #fff;}
+thead th:hover{background-color: #2a99cc; color: #fff;}
+/*ячейки*/
+tbody td{border-bottom: 1px solid #c6d5e1;}
+/*четные ячейки*/
+tbody tr.even {background-color: #fff;}
+tbody tr.odd {background-color: #ecf2f6;}
+/*отсортированный столбец*/
+tbody .sort{background-color: #69ffb0;}
+tbody .sort{background-color: #a5ffb0;}
+/*Hover на строку*/
+tbody tr:hover td, tbody tr:hover td.sort{background-color: #c6eeee; color: #fff;}
+/*Активная строка*/
+tbody tr.active td, tbody tr.active td.sort{background-color: #cd4236; color: #fff;}
+/*метка сортировки*/
+thead th.dsc::after{border-bottom: 5px solid #fff}
+thead th.getsort::after {border-bottom: 5px solid #ccc;}
+thead th.asc::after {border-top: 5px solid #fff;}
+thead th.getsort::before {border-top: 5px solid #ccc;}
+div[id^=pagination] a:hover{background-color: #ccc;}
+div[id^=pagination] a.current {background-color: #DFDFDF;}
+div[id^=pagination] a.disabled{  
+    pointer-events: none;    
+    color: #ccc;
+}
